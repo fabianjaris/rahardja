@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            background-color: #ffcccc;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            color: #b30000;
+            font-size: 3em;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .accept {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .accept:hover {
+            background-color: #cc0000;
+        }
+        .reject {
+            background-color: gray;
+            color: white;
+        }
+        .cat-gif {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Vatia Sarah Ichsani !!</h2>
+        <h1>Will you be my Valentine?</h1>
+        <button class="btn accept" onclick="growButton()" id="accept">Yes</button>
+        <button class="btn reject" onclick="shrinkButton()" id="reject">No</button>
+        <div class="cat-gif">
+            <img src="https://media.giphy.com/media/v6aOjy0Qo1fIA/giphy.gif" alt="Cute wiggling cat">
+        </div>
+    </div>
+
+    <script>
+        function shrinkButton() {
+            let rejectBtn = document.getElementById('reject');
+            let currentSize = parseFloat(window.getComputedStyle(rejectBtn).fontSize);
+            if (currentSize > 5) {
+                rejectBtn.style.fontSize = (currentSize - 2) + 'px';
+            } else {
+                rejectBtn.style.display = 'none';
+                document.body.innerHTML += '<h2 style="color:#b30000;">There is no escape! ❤</h2>';
+            }
+        }
+        
+        function growButton() {
+            let acceptBtn = document.getElementById('accept');
+            let currentSize = parseFloat(window.getComputedStyle(acceptBtn).fontSize);
+            acceptBtn.style.fontSize = (currentSize + 5) + 'px';
+            if (currentSize > 50) {
+                document.body.innerHTML = '<h1 style="color:#b30000;">Yay! I love you! ❤</h1>' +
+                                          '<img src="https://media.giphy.com/media/3ohs4BSacFKI7A717y/giphy.gif" alt="Happy cat">';
+            }
+        }
+    </script>
+</body>
+</html>
