@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thespian Atelier Ticketing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            padding: 20px 15px;
+            min-height: 80px;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            font-size: 1.2rem;
+        }
+
+        .ticket-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+
+        .ticket-card {
+            margin: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .ticket-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .ticket-card-body {
+            padding: 30px;
+        }
+
+        .ticket-card-body h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .ticket-price {
+            font-size: 1.5rem;
+            color: #ff5733;
+            font-weight: bold;
+        }
+
+        .btn-book {
+            background-color: #ff5733;
+            color: white;
+            font-size: 1.2rem;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-book:hover {
+            background-color: #e84f2f;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Thespian Atelier : Sangkar Waktu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ticketing.html">Tickets</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ticketing Section -->
+    <section class="ticket-section">
+        <h2>Buy Your Tickets for Sangkar Waktu</h2>
+        <p>Choose from our different ticket options below:</p>
+
+        <!-- Ticket Cards -->
+        <div class="container">
+            <div class="row">
+                <!-- Early Bird Ticket -->
+                <div class="col-md-4">
+                    <div class="ticket-card">
+                        <img src="early-bird-ticket.jpg" alt="Early Bird Ticket">
+                        <div class="ticket-card-body">
+                            <h3>Early Bird</h3>
+                            <p>Secure your spot early and get a discounted rate. Limited availability!</p>
+                            <p class="ticket-price">Rp 85,000</p>
+                            <a href="#" class="btn-book">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regular Ticket -->
+                <div class="col-md-4">
+                    <div class="ticket-card">
+                        <img src="regular-ticket.jpg" alt="Regular Ticket">
+                        <div class="ticket-card-body">
+                            <h3>Regular</h3>
+                            <p>Get your ticket at a standard price and enjoy the show!</p>
+                            <p class="ticket-price">Rp 100,000</p>
+                            <a href="#" class="btn-book">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIP Ticket -->
+                <div class="col-md-4">
+                    <div class="ticket-card">
+                        <img src="vip-ticket.jpg" alt="VIP Ticket">
+                        <div class="ticket-card-body">
+                            <h3>VIP</h3>
+                            <p>Get the best experience with our VIP ticket, including exclusive perks!</p>
+                            <p class="ticket-price">Rp 120,000</p>
+                            <a href="#" class="btn-book">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-Ad1Xu3a4ewlfmXhQbKlUl3ZUR3dNNEkpYKaZCgKcP7VknF8cvM3UwBAZbCo1CoXx" crossorigin="anonymous"></script>
+</body>
+</html>
